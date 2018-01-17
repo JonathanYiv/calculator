@@ -9,7 +9,7 @@ body {
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-areas:
     "display display display display"
-    "clear clear clear clear";
+    "clear clear clear none";
   width: 35vw;
   height: 55vh;
   margin: 20vh auto;
@@ -22,12 +22,13 @@ div#display {
   grid-area: display;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   border: .5vw solid #848389;
   border-radius: 10px;
   font-size: 4em;
   font-family: 'Orbitron', sans-serif;
   background-color: #D3E1E2;
+  overflow: hidden;
 }
 
 button {
@@ -51,4 +52,8 @@ button.operator {
 button#clear {
   grid-area: clear;
   background-color: #B85F78;
+}
+
+button#delete {
+  background-color: #7e8e9a;
 }

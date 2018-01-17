@@ -15,18 +15,72 @@ function playSound() {
 // Update Display when Button is Pressed
 const display = document.querySelector('#display');
 
+let lastButtonPressed;
+
+const acceptableDecimals = new RegExp(/[1-9]+\.[1-9]*$/, 'g');
+
 function updateDisplay() {
-  console.log(textContent.length);
-  if (this.textContent === "clear") {
-    display.textContent = "";
-  } else if (this.textContent === "=") {
-    display.textContent = calculate();
-  } else {
-    display.textContent += this.textContent;
+  clearAfterOperation();
+  switch(this.textContent) {
+    case "clear":
+      clear();
+      break;
+    case "del":
+      backspace();
+      break;
+    case "=":
+      calculate();
+      break;
+    case ".":
+      if(!display.textContent.match(acceptableDecimals)) {
+        display.textContent += this.textContent;
+      }
+      break;
+    default:
+      display.textContent += this.textContent;
+  }
+  lastButtonPressed = this.textContent;
+}
+
+
+
+function clear() {
+  display.textContent = "";
+}
+
+function clearAfterOperation() {
+  if (lastButtonPressed === "=") {
+    clear();
   }
 }
 
-// Calculate
+function backspace() {
+  if (display.textContent === "ERROR") {
+    clear();
+  }
+  display.textContent = display.textContent
+                               .slice
+                               (0, display.textContent.length - 1);
+}
+
 function calculate() {
-  return eval(display.textContent).toFixed(2);
+  try {
+    display.textContent = eval(display.textContent).toFixed(2);
+  }
+  catch(error) {
+    display.textContent = "ERROR";
+  }
+}
+
+// Press Buttons for Keyboard
+window.addEventListener('keydown', clickButton);
+
+function clickButton(e) {
+  if (e.shiftKey && e.keyCode == 187) {
+    document.querySelector(`.add`).click();
+  } else if (e.shiftKey && e.keyCode == 56) {
+    document.querySelector(`.multiply`).click();
+  } else {
+    document.querySelector(`button[data-key="${e.keyCode}"]`).click();
+  }
 }

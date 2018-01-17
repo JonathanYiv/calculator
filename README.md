@@ -10,13 +10,15 @@ This project builds a calculator in vanilla HTML/CSS/JS with:
 * Multiplying ✓
 * Dividing ✓
 * Consecutive Operations ✓
-* Error Handling, i.e. pressing `=` early or 5.5.5
-* Rounding
-* Keyboard Support, including Backspace
+* Error Handle pressing `=` early ✓
+* Error Handle `5.5.5` ✓
+* Rounding ✓
+* Keyboard Support, including Backspace ✓
+* No Screen Overflow ✓
 
 This is a project from [The Odin Project](https://www.theodinproject.com/courses/web-development-101/lessons/calculator).
 
-Screenshot...
+![Screenshot of Project](assets/images/scerenshot.png)
 
 ## Pre-Project Thoughts
 
@@ -26,4 +28,7 @@ I might experiment with some fancy CSS stuff.. maybe.
 
 ## Post-Project Thoughts
 
-...
+This was fun.
+I used CSS Grid for the first time..wowee. That is some awesomely powerful stuff.
+That positioning power is excellent.
+This was some good JS practice as well.

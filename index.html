@@ -15,23 +15,24 @@
   <body>
     <div id="calculator">
       <div id="display"></div>
-      <button id="clear">clear</button>
-      <button>7</button>
-      <button>8</button>
-      <button>9</button>
-      <button class="operator">/</button>
-      <button>4</button>
-      <button>5</button>
-      <button>6</button>
-      <button class="operator">*</button>
-      <button>1</button>
-      <button>2</button>
-      <button>3</button>
-      <button class="operator">-</button>
-      <button>0</button>
-      <button>.</button>
-      <button class="operator">=</button>
-      <button class="operator">+</button>
+      <button id="clear" data-key="67">clear</button>
+      <button id="delete" class="operator" data-key="8">del</button>
+      <button data-key="55">7</button>
+      <button data-key="56">8</button>
+      <button data-key="57">9</button>
+      <button class="operator" data-key="191">/</button>
+      <button data-key="52">4</button>
+      <button data-key="53">5</button>
+      <button data-key="54">6</button>
+      <button class="operator multiply" data-key="56">*</button>
+      <button data-key="49">1</button>
+      <button data-key="50">2</button>
+      <button data-key="51">3</button>
+      <button class="operator" data-key="189">-</button>
+      <button data-key="48">0</button>
+      <button data-key="190">.</button>
+      <button class="operator" data-key="187">=</button>
+      <button class="operator add" data-key="187">+</button>
     </div>
     <audio src="assets/audio/click.mp3">
     <script src="assets/js/calculator.js"></script>
