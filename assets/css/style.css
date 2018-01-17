@@ -1,0 +1,54 @@
+body {
+  background: url(../images/granite.jpg) no-repeat;
+
+}
+
+#calculator {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "display display display display"
+    "clear clear clear clear";
+  width: 35vw;
+  height: 55vh;
+  margin: 20vh auto;
+  border: 1vw solid #DAD9D5;
+  border-radius: 15px;
+  background-color: #DAD9D5;
+}
+
+div#display {
+  grid-area: display;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: .5vw solid #848389;
+  border-radius: 10px;
+  font-size: 4em;
+  font-family: 'Orbitron', sans-serif;
+  background-color: #D3E1E2;
+}
+
+button {
+  font-family: 'Sigmar One', cursive;
+  font-size: 3em;
+  background-color: #8F8F91;
+}
+
+button:focus {
+  outline-style: none;
+}
+
+button:active {
+  border-style: inherit;
+}
+
+button.operator {
+  background-color: #505050;
+}
+
+button#clear {
+  grid-area: clear;
+  background-color: #B85F78;
+}
