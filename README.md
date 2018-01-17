@@ -1,16 +1,16 @@
 # Calculator Project
 
 This project builds a calculator in vanilla HTML/CSS/JS with:
-* Interface with Buttons/Display
-* Divison by Zero
-* Clear Button
-* Decimals
-* Adding
-* Subtracting
-* Multiplying
-* Dividing
-* Consecutive Operations
-* Error Handling, i.e. pressing `=` early.
+* Interface with Buttons/Display ✓
+* Divison by Zero ✓
+* Clear Button ✓
+* Decimals ✓
+* Adding ✓
+* Subtracting ✓
+* Multiplying ✓
+* Dividing ✓
+* Consecutive Operations ✓
+* Error Handling, i.e. pressing `=` early or 5.5.5
 * Rounding
 * Keyboard Support, including Backspace
 
