@@ -18,7 +18,7 @@ This project builds a calculator in vanilla HTML/CSS/JS with:
 
 This is a project from [The Odin Project](https://www.theodinproject.com/courses/web-development-101/lessons/calculator).
 
-![Screenshot of Project](assets/images/scerenshot.png)
+![Screenshot of Project](assets/images/screenshot.png)
 
 ## Pre-Project Thoughts
 
